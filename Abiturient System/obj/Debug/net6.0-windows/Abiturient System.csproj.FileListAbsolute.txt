@@ -1,0 +1,40 @@
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\bin\Debug\net6.0-windows\Abiturient System.exe
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\bin\Debug\net6.0-windows\Abiturient System.deps.json
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\bin\Debug\net6.0-windows\Abiturient System.runtimeconfig.json
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\bin\Debug\net6.0-windows\Abiturient System.dll
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\bin\Debug\net6.0-windows\Abiturient System.pdb
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Abiturient System.csproj.AssemblyReference.cache
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\registration_login_view\LoginPage.g.cs
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\registration_login_view\RegistrationPage.g.cs
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\App.g.cs
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Abiturient System_MarkupCompile.cache
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Abiturient System_MarkupCompile.lref
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\registration_login_view\LoginPage.baml
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\registration_login_view\RegistrationPage.baml
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Abiturient System.g.resources
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Abiturient System.GeneratedMSBuildEditorConfig.editorconfig
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Abiturient System.AssemblyInfoInputs.cache
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Abiturient System.AssemblyInfo.cs
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Abiturient System.csproj.CoreCompileInputs.cache
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Abiturient System.dll
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\refint\Abiturient System.dll
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Abiturient System.pdb
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Abiturient System.genruntimeconfig.cache
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\ref\Abiturient System.dll
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\MainWindow.g.cs
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\MainWindow.baml
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Style\CustomWindowStyle.baml
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Style\registration_login\LabelStyle.baml
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Style\registration_login\RegistrationLoginInputStyle.baml
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Style\registration_login\ButtonStyle.baml
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\registration_login_view\AbiturientRegistrationPage.g.cs
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\registration_login_view\AdmissionRegistrationPage.g.cs
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\registration_login_view\AbiturientRegistrationPage.baml
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\registration_login_view\AdmissionRegistrationPage.baml
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\bin\Debug\net6.0-windows\Npgsql.dll
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\Abiturient System.csproj.CopyComplete
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\education\Educational_Institution_Page.g.cs
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\education\Educational_Institution_Page.baml
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\education\EducationWithFacutliesPage.g.cs
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\education\EducationWithFacutliesPage.baml

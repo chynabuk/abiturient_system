@@ -1,0 +1,40 @@
+﻿<Page x:Class="Abiturient_System.View.registration_login_view.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="LoginPage"
+      >
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../Style/registration_login/RegistrationLoginInputStyle.xaml"/>
+                <ResourceDictionary Source="../../Style/registration_login/LabelStyle.xaml"/>
+                <ResourceDictionary Source="../../Style/registration_login/ButtonStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <GroupBox Header="Вход" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Height="800" Width="1000">
+        <Grid Margin="30, 80, 30, 80" Height="550">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Style="{StaticResource LabelStyle}">Телефон:</Label>
+            <TextBox x:Name="Phone" Grid.Row="0" VerticalAlignment="Bottom" Style="{StaticResource TextBoxStyle}"/>
+
+            <Label Grid.Row="1" Style="{StaticResource LabelStyle}">Пароль:</Label>
+            <TextBox x:Name="Password" Grid.Row="1" VerticalAlignment="Bottom" Style="{StaticResource TextBoxStyle}"/>
+
+            <Button Grid.Row="2" Style="{StaticResource ButtonStyle}" Click="SignIn_Click">Войти</Button>
+
+            <TextBlock Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Hyperlink Click="SwitchToRegistrationPageClick">Не зарегистрированы?</Hyperlink>
+            </TextBlock>
+        </Grid>
+    </GroupBox>
+</Page>

@@ -1,0 +1,21 @@
+﻿<Page x:Class="Abiturient_System.View.education.EducationWithFacutliesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Abiturient_System.View.education"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Background="White"
+      Title="EducationWithFacutliesPage">
+    <Grid>
+        <StackPanel Margin="100, 50, 100, 50">
+            <TextBlock x:Name="EducationName" FontSize="50" Text="INAI" HorizontalAlignment="Center"/>
+            <ScrollViewer Margin="50, 30, 30, 50" Height="850" VerticalAlignment="Top">
+                <StackPanel x:Name="Faculties">
+                    
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Page>
