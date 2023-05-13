@@ -74,7 +74,7 @@ namespace Abiturient_System.View.education
         {
             Hyperlink hyperLink = sender as Hyperlink;
             Educational_Institution educational_Institution = (Educational_Institution) hyperLink.Tag;
-            MessageBox.Show(educational_Institution.Id + " ");
+            NavigationService.Navigate(new EducationWithFacutliesPage(educational_Institution, educational_InstitutionViewModel));
 
         }
 

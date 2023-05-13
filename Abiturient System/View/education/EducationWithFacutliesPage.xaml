@@ -10,10 +10,11 @@
       Title="EducationWithFacutliesPage">
     <Grid>
         <StackPanel Margin="100, 50, 100, 50">
+            <Button Width="90" Height="40" HorizontalAlignment="Left" Click="GoBack">Назад</Button>
             <TextBlock x:Name="EducationName" FontSize="50" Text="INAI" HorizontalAlignment="Center"/>
             <ScrollViewer Margin="50, 30, 30, 50" Height="850" VerticalAlignment="Top">
                 <StackPanel x:Name="Faculties">
-                    
+
                 </StackPanel>
             </ScrollViewer>
         </StackPanel>

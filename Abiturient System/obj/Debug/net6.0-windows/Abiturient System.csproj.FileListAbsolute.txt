@@ -38,3 +38,5 @@ D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-win
 D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\education\Educational_Institution_Page.baml
 D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\education\EducationWithFacutliesPage.g.cs
 D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\education\EducationWithFacutliesPage.baml
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\education\FacultyWithApplicationsPage.g.cs
+D:\inai3-6-semester\с#\Abiturient System\Abiturient System\obj\Debug\net6.0-windows\View\education\FacultyWithApplicationsPage.baml

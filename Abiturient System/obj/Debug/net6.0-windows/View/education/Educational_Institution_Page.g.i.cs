@@ -69,8 +69,7 @@ namespace Abiturient_System.View.education {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Abiturient System;V1.0.0.0;component/view/education/educational_institution_page" +
-                    ".xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Abiturient System;component/view/education/educational_institution_page.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\education\Educational_Institution_Page.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

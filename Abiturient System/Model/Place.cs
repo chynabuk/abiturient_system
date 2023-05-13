@@ -8,5 +8,8 @@ namespace Abiturient_System.Model
 {
     public class Place
     {
+        public long Id { get; set; }
+        public long FacultyId { get; set; }
+        public bool IsFree { get; set; }
     }
 }

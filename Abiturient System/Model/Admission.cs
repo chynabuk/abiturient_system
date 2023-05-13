@@ -8,5 +8,7 @@ namespace Abiturient_System.Model
 {
     public class Admission : User
     {
+        public long FacultyId { get; set; }
+        public string Email { get; set; }
     }
 }

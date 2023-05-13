@@ -55,6 +55,34 @@ namespace Abiturient_System.Repository
             }
         }
 
+        public Abiturient GetAbiturient(String phone)
+        {
+            using (var abiturientCommand = new NpgsqlCommand("select * from abiturients where phone=@phone", Connection.getInstance().getConnection()))
+            {
+                abiturientCommand.Parameters.AddWithValue("phone", phone);
+
+                using (var abiturientReader = abiturientCommand.ExecuteReader())
+                {
+                    if (abiturientReader.Read())
+                    {
+                        return new Abiturient()
+                        {
+                            Phone = phone,
+                            FirstName = abiturientReader[0].ToString(),
+                            DiplomaImage = abiturientReader[1].ToString(),
+                            OrtCertificateImage = abiturientReader[2].ToString(),
+                            PassportImage = abiturientReader[3].ToString(),
+                            RegistrationCertificateImage = abiturientReader[4].ToString(),
+                            LastName = abiturientReader[6].ToString(),
+                            ApplicationAvailable = (int)abiturientReader["application_available"],
+                            Role = "Абитуриент"
+                        };
+                    }
+                }
+            }
+            throw new Exception("User not found");
+        }
+
         public User Login(String phone, String password)
         {
             using (var userCommand = new NpgsqlCommand("select * from users where phone=@phone", Connection.getInstance().getConnection()))
@@ -65,7 +93,7 @@ namespace Abiturient_System.Repository
                 {
                     if (userReader.Read())
                     {
-                        if (userReader[1].ToString().Equals(password))
+                        if (userReader["password"].ToString().Equals(password))
                         {
                             if (userReader[2].ToString().Equals("Абитуриент"))
                             {
@@ -88,11 +116,40 @@ namespace Abiturient_System.Repository
                                                 OrtCertificateImage = abiturientReader[2].ToString(),
                                                 PassportImage = abiturientReader[3].ToString(),
                                                 RegistrationCertificateImage = abiturientReader[4].ToString(),
-                                                LastName = abiturientReader[6].ToString()
+                                                LastName = abiturientReader[6].ToString(),
+                                                ApplicationAvailable = (int) abiturientReader["application_available"],
+                                                Role = "Абитуриент"
                                             };
                                         }
                                     }
                                 }
+                            }
+                            else if (userReader["role"].ToString().Equals("Приемная комиссия"))
+                            {
+                                Connection.getInstance().getConnection().Close();
+                                Connection.getInstance().getConnection().Open();
+
+                                using (var admissionCommand = new NpgsqlCommand("select * from admissions where phone=@phone", Connection.getInstance().getConnection()))
+                                {
+                                    admissionCommand.Parameters.AddWithValue("phone", phone);
+
+                                    using (var admissionReader = admissionCommand.ExecuteReader())
+                                    {
+                                        if (admissionReader.Read())
+                                        {
+                                            return new Admission()
+                                            {
+                                                Phone = phone,
+                                                FirstName = admissionReader["first_name"].ToString(),
+                                                LastName = admissionReader["last_name"].ToString(),
+                                                FacultyId = (long) admissionReader["faculty_id"],
+                                                Email = admissionReader["email"].ToString(),
+                                                Role = "Приемная комиссия"
+                                            };
+                                        }
+                                    }
+                                }
+
                             }
                         }
                         throw new Exception("Неверный пароль");

@@ -21,5 +21,39 @@ namespace Abiturient_System.ViewModel.education
         {
             return institutionRepository.ReadAllEducational_Institutions();
         }
+
+        public List<Faculty> GetFaculties(long id)
+        {
+            return institutionRepository.getAllFacultiesOfEducation(id);
+        }
+
+        public List<ApplicationForm> GetApplicationFormsByFaculty(long id)
+        {
+            return institutionRepository.getAllApplicationsByFaculty(id);
+        }
+
+        public List<ApplicationForm> GetApplicationFormsByFaculty(Faculty faculty)
+        {
+            return institutionRepository.getAllApplicationsByFaculty(faculty);
+        }
+
+        public List<ApplicationForm> GetApplicationForms()
+        {
+            return institutionRepository.getAllApplications();
+        }
+
+        public void sentApplicationForm(ApplicationForm form)
+        {
+            institutionRepository.sentApplicationForm(form);
+        }
+
+        public void ConfirmApplicationForm(ApplicationForm form)
+        {
+            institutionRepository.confirmApplicationForm(form);
+        }
+        public void RejectApplicationForm(ApplicationForm form)
+        {
+            institutionRepository.rejectApplicationForm(form);
+        }
     }
 }

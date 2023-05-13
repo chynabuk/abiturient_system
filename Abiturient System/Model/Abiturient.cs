@@ -12,5 +12,7 @@ namespace Abiturient_System.Model
         public String DiplomaImage { get; set; }
         public String OrtCertificateImage { get; set; }
         public String RegistrationCertificateImage { get; set; }
+        public int ApplicationAvailable { get; set; }
+
     }
 }
