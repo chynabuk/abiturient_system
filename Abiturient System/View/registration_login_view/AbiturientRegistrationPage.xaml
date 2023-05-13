@@ -19,18 +19,21 @@
                 <RowDefinition Height="325"/>
                 <RowDefinition Height="150"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" FontSize="25" Height="50" Margin="0,12,0,238" Padding="50, 5, 0, 5">Имя</Label>
-            <TextBox x:Name="FirstName" Grid.Row="0" Grid.Column="0" FontSize="25" Width="600" Height="50" Margin="50,76,50,199"/>
+            <Label Grid.Row="0" Grid.Column="0" FontSize="20" Height="50" Margin="0,12,0,238" Padding="50, 5, 0, 5">Имя</Label>
+            <TextBox x:Name="FirstName" Grid.Row="0" Grid.Column="0" FontSize="20" Width="600" Height="40" Margin="50,76,50,199"/>
 
-            <Label Grid.Row="0" Grid.Column="0" FontSize="25" Height="50" Margin="0,182,0,93" Padding="50, 5, 0, 5">Фамилия</Label>
-            <TextBox x:Name="LastName" Grid.Row="0" Grid.Column="0" FontSize="25" Width="600" Height="50" Margin="50,233,50,42"/>
+            <Label Grid.Row="0" Grid.Column="0" FontSize="20" Height="50" Margin="0,122,0,93" Padding="50, 5, 0, 5">Фамилия</Label>
+            <TextBox x:Name="LastName" Grid.Row="0" Grid.Column="0" FontSize="20" Width="600" Height="40" Margin="50,173,50,42"/>
 
-            <Label Grid.Column="0" FontSize="25" Height="50" Margin="0,324,0,276" Padding="50, 5, 0, 5" Grid.RowSpan="2">Телефон</Label>
-            <TextBox x:Name="Phone" Grid.Row="1" Grid.Column="0" FontSize="25" Width="600" Height="60" Margin="50,54,50,211"/>
+            <Label Grid.Column="0" FontSize="25" Height="50" Margin="0,250,0,276" Padding="50, 5, 0, 5" Grid.RowSpan="2">Телефон</Label>
+            <TextBox x:Name="Phone" Grid.Row="1" Grid.Column="0" FontSize="20" Width="600" Height="40" Margin="50,0,50,211"/>
 
-            <Label Grid.Row="1" Grid.Column="0" FontSize="25" Height="50" Margin="0,154,0,121" Padding="50, 5, 0, 5">Пароль</Label>
-            <TextBox x:Name="Password" Grid.Row="1" Grid.Column="0" FontSize="25" Width="600" Height="60" Margin="50,209,50,56"/>
+            <Label Grid.Row="1" Grid.Column="0" FontSize="20" Height="50" Margin="0,64,0,121" Padding="50, 5, 0, 5">Пароль</Label>
+            <TextBox x:Name="Password" Grid.Row="1" Grid.Column="0" FontSize="20" Width="600" Height="40" Margin="50,119,50,56"/>
 
+            <Label Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" FontSize="20" Height="50" Margin="0,150,0,77" Padding="50, 5, 0, 5">Основной балл ОРТ</Label>
+            <TextBox x:Name="OrtScore" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" FontSize="20" Width="600" Height="40" Margin="50,190,50,11"/>
+            
             <StackPanel Grid.Row="0" Grid.Column="1" Height="325" Width="325">
                 <Label FontSize="15" Margin="25, 0, 0, 0">Паспорт(лицевая сторона)</Label>
                 <Grid>

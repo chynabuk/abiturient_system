@@ -31,6 +31,10 @@ namespace Abiturient_System.ViewModel.education
         {
             return institutionRepository.getAllApplicationsByFaculty(id);
         }
+        public List<ApplicationForm> GetApplicationFormsByFacultySortedByOrtScore(Faculty faculty)
+        {
+            return institutionRepository.getAllApplicationsByFacultySortedByOrtScore(faculty);
+        }
 
         public List<ApplicationForm> GetApplicationFormsByFaculty(Faculty faculty)
         {

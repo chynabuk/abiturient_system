@@ -32,7 +32,12 @@ namespace Abiturient_System.View.registration_login_view
 
         private void SwitchToAdmissionRegistrationPage_Click(object sender, RoutedEventArgs e)
         {
+            NavigationService.Navigate(new AdmissionRegistrationPage());
+        }
 
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }

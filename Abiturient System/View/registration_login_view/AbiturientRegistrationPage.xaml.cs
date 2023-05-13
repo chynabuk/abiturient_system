@@ -91,6 +91,7 @@ namespace Abiturient_System.View.registration_login_view
             String lastName = LastName.Text;
             String password = Password.Text;
             String role = "Абитуриент";
+            int ortScore = int.Parse(OrtScore.Text);
 
             if(phone == null || phone == "")
             {
@@ -126,10 +127,12 @@ namespace Abiturient_System.View.registration_login_view
                 FirstName = firtsName,
                 LastName = lastName,
                 Role = role,
+                Password = password,
                 PassportImage = passportImage,
                 OrtCertificateImage = ortCertificateImage,
                 DiplomaImage = diplomaImage,
-                RegistrationCertificateImage = registrationCertificateImage
+                RegistrationCertificateImage = registrationCertificateImage,
+                OrtScore = ortScore
             };
 
             abiturientRegistrationPageModel.register(abiturient);

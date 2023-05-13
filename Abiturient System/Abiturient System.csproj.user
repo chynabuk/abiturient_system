@@ -16,6 +16,9 @@
     <Compile Update="View\education\FacultyWithApplicationsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\education\StatisticPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\registration_login_view\AbiturientRegistrationPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -49,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\education\FacultyWithApplicationsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\education\StatisticPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\MainWindow.xaml">

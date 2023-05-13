@@ -14,10 +14,12 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
 
                 <Button Grid.Row="0" Height="100" Width="400" Click="SwitchToAbiturientRegistrationPage_Click">Абитуриент</Button>
                 <Button Grid.Row="1" Height="100" Width="400" Click="SwitchToAdmissionRegistrationPage_Click">Приемная комиссия</Button>
+                <Button Grid.Row="2"  Height="40" Width="120" FontSize="24" Click="Back_Click">Назад</Button>
             </Grid>
         </GroupBox>
     </Grid>

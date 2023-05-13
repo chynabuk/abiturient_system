@@ -7,7 +7,6 @@
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Educational_Institution_Page"
-      Background="White"
       >
 
     <GroupBox FontSize="40" Header="ВУЗы" Margin="20" Padding="10">
@@ -23,6 +22,9 @@
                 <ColumnDefinition Width="300"/>
             </Grid.ColumnDefinitions>
 
+            <TextBlock>
+                <Hyperlink FontSize="30" Click="Statistic_Click">Статистика ОРТ</Hyperlink>
+            </TextBlock>
 
             <ScrollViewer Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Height="800" VerticalAlignment="Top">
                 <Grid>
@@ -31,7 +33,6 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <StackPanel x:Name="Col1" Grid.Column="0">
-                        
                     </StackPanel>
 
                     <StackPanel x:Name="Col2" Grid.Column="1"></StackPanel>

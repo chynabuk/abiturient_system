@@ -14,5 +14,9 @@ namespace Abiturient_System.Model
         public long FacultyId { get; set; }
         public string Status { get; set; }
         public Faculty faculty { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int OrtScore { get; set; }
+
     }
 }

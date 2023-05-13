@@ -41,9 +41,17 @@ namespace Abiturient_System.View.registration_login_view
             String phone = Phone.Text;
             String password = Password.Text;
 
-            Authentication.User = userRepository.Login(phone, password);
+            try
+            {
+                Authentication.User = userRepository.Login(phone, password);
 
-            NavigationService.Navigate(new Educational_Institution_Page());
+                NavigationService.Navigate(new Educational_Institution_Page());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
     }

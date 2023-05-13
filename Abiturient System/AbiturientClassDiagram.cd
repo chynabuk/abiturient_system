@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abiturient_System.Model.Abiturient">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAUAAAAAAAACACAAQAAAAAAAAA=</HashCode>
+      <FileName>Model\Abiturient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abiturient_System.Model.Admission">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Admission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abiturient_System.Model.Educational_Institution">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Model\Educational_Institution.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abiturient_System.Model.Faculty">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAQQAAAAABAAAAAAAQAAAAAQ=</HashCode>
+      <FileName>Model\Faculty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abiturient_System.Model.Place">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Place.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abiturient_System.Model.User">
+    <Position X="2.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAEAAAAAAAAAAAAAACAAAAIAAAAAg=</HashCode>
+      <FileName>Model\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abiturient_System.Model.ApplicationForm">
+    <Position X="12.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAEAUgCAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAg=</HashCode>
+      <FileName>Model\ApplicationForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abiturient_System.MainWindow">
+    <Position X="6.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abiturient_System.App" Collapsed="true">
+    <Position X="0.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abiturient_System.Repository.Educational_InstitutionRepository">
+    <Position X="9.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAABAAAAACCgAAAAAAAAAAIAAAAAABgAAEAAAAA=</HashCode>
+      <FileName>Repository\Educational_InstitutionRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abiturient_System.Repository.UserRepository">
+    <Position X="8.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAEAAAAAAAEAAAAAAAAAAAAAABAAAAAAAQQAAAAAA=</HashCode>
+      <FileName>Repository\UserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abiturient_System.Util.Authentication">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Util\Authentication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abiturient_System.Util.Connection">
+    <Position X="2.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAABAAAAAAQAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Util\Connection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abiturient_System.View.education.Educational_Institution_Page" BaseTypeListCollapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>View\education\Educational_Institution_Page.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Abiturient_System.View.education.EducationWithFacutliesPage" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAIAAAAAAAAAAAAAAAAAAACCEAAAAAAAAAAAA=</HashCode>
+      <FileName>View\education\EducationWithFacutliesPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Abiturient_System.View.education.FacultyWithApplicationsPage" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAEAgAAAAAgAAAAAAAAAAAAACAEAAAAAIIAACAA=</HashCode>
+      <FileName>View\education\FacultyWithApplicationsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Abiturient_System.View.education.StatisticPage" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAIAAAAAAAIAAA=</HashCode>
+      <FileName>View\education\StatisticPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Abiturient_System.View.registration_login_view.AbiturientRegistrationPage" BaseTypeListCollapsed="true">
+    <Position X="16.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAgQQAAAAAASAABAAAEAAAQACAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>View\registration_login_view\AbiturientRegistrationPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Abiturient_System.View.registration_login_view.AdmissionRegistrationPage" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>View\registration_login_view\AdmissionRegistrationPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Abiturient_System.View.registration_login_view.LoginPage" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhAAAAIAAAAA=</HashCode>
+      <FileName>View\registration_login_view\LoginPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Abiturient_System.View.registration_login_view.RegistrationPage" BaseTypeListCollapsed="true">
+    <Position X="14" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAgAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>View\registration_login_view\RegistrationPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Abiturient_System.ViewModel.education.Educational_InstitutionViewModel">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAQAAAAAAAAEAAAAABAAQAACEAAEAAAAI=</HashCode>
+      <FileName>ViewModel\education\Educational_InstitutionViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abiturient_System.ViewModel.registration_login.AbiturientRegistrationPageModel">
+    <Position X="3.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAQAAQIAAAAA=</HashCode>
+      <FileName>ViewModel\registration_login\AbiturientRegistrationPageModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

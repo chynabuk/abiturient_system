@@ -34,6 +34,9 @@ namespace Abiturient_System.View.education
             foreach (Educational_Institution educational_Institution in educational_InstitutionViewModel.GetEducational_Institutions())
             {
                 StackPanel stackPanel = new StackPanel();
+                stackPanel.Margin = new Thickness(0, 30, 0, 0);
+                stackPanel.Width = 400;
+                stackPanel.Background = new SolidColorBrush(Color.FromRgb(217, 236, 255));
 
                 TextBlock educationName = new TextBlock();
                 educationName.FontSize = 30;
@@ -75,8 +78,11 @@ namespace Abiturient_System.View.education
             Hyperlink hyperLink = sender as Hyperlink;
             Educational_Institution educational_Institution = (Educational_Institution) hyperLink.Tag;
             NavigationService.Navigate(new EducationWithFacutliesPage(educational_Institution, educational_InstitutionViewModel));
-
         }
 
+        private void Statistic_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new StatisticPage());
+        }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\inai3-6-semester\с#\Abiturient System\Abiturient System\App.xaml
-12-456244114
+13441118118
 
-2579006064
-196848033004
-Style\CustomWindowStyle.xaml;Style\registration_login\ButtonStyle.xaml;Style\registration_login\LabelStyle.xaml;Style\registration_login\RegistrationLoginInputStyle.xaml;View\education\Educational_Institution_Page.xaml;View\education\EducationWithFacutliesPage.xaml;View\education\FacultyWithApplicationsPage.xaml;View\MainWindow.xaml;View\registration_login_view\AbiturientRegistrationPage.xaml;View\registration_login_view\AdmissionRegistrationPage.xaml;View\registration_login_view\LoginPage.xaml;View\registration_login_view\RegistrationPage.xaml;
+26553593553
+196-119293007
+Style\CustomWindowStyle.xaml;Style\registration_login\ButtonStyle.xaml;Style\registration_login\LabelStyle.xaml;Style\registration_login\RegistrationLoginInputStyle.xaml;View\education\Educational_Institution_Page.xaml;View\education\EducationWithFacutliesPage.xaml;View\education\FacultyWithApplicationsPage.xaml;View\education\StatisticPage.xaml;View\MainWindow.xaml;View\registration_login_view\AbiturientRegistrationPage.xaml;View\registration_login_view\AdmissionRegistrationPage.xaml;View\registration_login_view\LoginPage.xaml;View\registration_login_view\RegistrationPage.xaml;
 
 True
 

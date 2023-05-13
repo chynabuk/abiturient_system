@@ -1,5 +1,7 @@
 ﻿using Abiturient_System.Model;
 using Abiturient_System.Repository;
+using Abiturient_System.Util;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +24,21 @@ namespace Abiturient_System.ViewModel.registration_login
         {
             userRepository.Register(abiturient);
             MessageBox.Show("Успешно зарегистрированы");
+        }
+
+        public List<Abiturient> TopFiveAbiturients()
+        {
+            return userRepository.TopFiveAbiturients();
+        }
+
+        public int MinOrtScore()
+        {
+            return userRepository.MinOrtScore();
+        }
+
+        public decimal AverageOrtScore()
+        {
+            return userRepository.AverageOrtScore();
         }
     }
 }

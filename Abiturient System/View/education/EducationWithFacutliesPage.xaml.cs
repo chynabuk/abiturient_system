@@ -37,6 +37,7 @@ namespace Abiturient_System.View.education
 
         private void initPage()
         {
+            EducationName.Text = education.Name;
             List<Faculty> faculties = educational_InstitutionViewModel.GetFaculties(education.Id);
 
             foreach(Faculty faculty in faculties)
@@ -78,6 +79,7 @@ namespace Abiturient_System.View.education
 
         private void GoBack(object sender, RoutedEventArgs e)
         {
+            NavigationService.Refresh();
             NavigationService.GoBack();
         }
     }

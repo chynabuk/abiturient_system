@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Abiturient_System.Model;
+using Abiturient_System.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,40 @@ namespace Abiturient_System.View.registration_login_view
     /// </summary>
     public partial class AdmissionRegistrationPage : Page
     {
+        private UserRepository userRepository;
+
         public AdmissionRegistrationPage()
         {
+            userRepository = new UserRepository();
             InitializeComponent();
         }
+
+        private void Register_Click(object sender, RoutedEventArgs e)
+        {
+            String phone = Phone.Text;
+            String firtsName = FirstName.Text;
+            String lastName = LastName.Text;
+            String password = Password.Text;
+            String email = Email.Text;
+            long facultyId = long.Parse(FacultyId.Text);
+            String role = "Приемная комиссия";
+
+            Admission admission = new Admission()
+            {
+                Phone = phone,
+                FirstName = firtsName,
+                LastName = lastName,
+                Password = password,
+                Email = email,
+                FacultyId = facultyId,
+                Role = role
+            };
+
+            userRepository.Register(admission);
+
+            NavigationService.GoBack();
+        }
     }
+
+
 }

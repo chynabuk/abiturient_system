@@ -16,18 +16,22 @@
             <TextBlock x:Name="FacultyName" FontSize="50" Text="INAI" HorizontalAlignment="Center"/>
             <ScrollViewer Margin="50, 30, 30, 50" Height="500" VerticalAlignment="Top">
                 <StackPanel x:Name="Applications">
-                    <TextBlock x:Name="DataAmount" Text="Size"/>
+                    <TextBlock x:Name="DataAmount" FontSize="24" Text="Size"/>
                     <Grid Margin="0, 30, 0, 0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="450"/>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="#" FontSize="24" Grid.Column="0"/>
-                        <TextBlock Text="Номер абитуриента" Grid.Column="1" FontSize="24"/>
-                        <TextBlock Grid.Column="2" FontSize="24" Text="Статус"/>
+                        <TextBlock Text="Номер" FontSize="24" Grid.Column="1"/>
+                        <TextBlock Text="ФИО" Grid.Column="2" FontSize="24"/>
+                        <TextBlock Text="ОРТ балл" Grid.Column="3" FontSize="24"/>
+                        <TextBlock Grid.Column="4" FontSize="24" Text="Статус"/>
                     </Grid>
                 </StackPanel>
             </ScrollViewer>

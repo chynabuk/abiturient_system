@@ -3,9 +3,7 @@ using Abiturient_System.Util;
 using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Documents;
 
 namespace Abiturient_System.Repository
 {
@@ -26,8 +24,8 @@ namespace Abiturient_System.Repository
             {
                 Abiturient abiturient = (Abiturient) user;
 
-                using (var command = new NpgsqlCommand("insert into abiturients (phone, first_name, last_name, diploma_img, ort_certificate_img, passport_img, registration_certificate_img) " +
-                    "values (@v1, @v2, @v3, @v4, @v5, @v6, @v7)", Connection.getInstance().getConnection()))
+                using (var command = new NpgsqlCommand("insert into abiturients (phone, first_name, last_name, diploma_img, ort_certificate_img, passport_img, registration_certificate_img, ort_score) " +
+                    "values (@v1, @v2, @v3, @v4, @v5, @v6, @v7, @v8)", Connection.getInstance().getConnection()))
                 {
                     command.Parameters.AddWithValue("v1", abiturient.Phone);
                     command.Parameters.AddWithValue("v2", abiturient.FirstName);
@@ -36,6 +34,7 @@ namespace Abiturient_System.Repository
                     command.Parameters.AddWithValue("v5", abiturient.OrtCertificateImage);
                     command.Parameters.AddWithValue("v6", abiturient.PassportImage);
                     command.Parameters.AddWithValue("v7", abiturient.RegistrationCertificateImage);
+                    command.Parameters.AddWithValue("v8", abiturient.OrtScore);
 
                     command.ExecuteNonQuery();
                 }
@@ -44,13 +43,16 @@ namespace Abiturient_System.Repository
             {
                 Admission admission = (Admission)user;
 
-                using (var command = new NpgsqlCommand("insert into abiturients (phone, first_name, last_name, diploma_img, ort_certificate_img, passport_img, registration_certificate_img) " +
-                    "value (@v1, @v2, @v3, @v4, @v5, @v6, @v7)", Connection.getInstance().getConnection()))
+                using (var command = new NpgsqlCommand("insert into admissions (phone, first_name, last_name, faculty_id, email) " +
+                    "values (@v1, @v2, @v3, @v4, @v5)", Connection.getInstance().getConnection()))
                 {
                     command.Parameters.AddWithValue("v1", admission.Phone);
                     command.Parameters.AddWithValue("v2", admission.FirstName);
                     command.Parameters.AddWithValue("v3", admission.LastName);
-                    command.Parameters.AddWithValue("v3", admission.LastName);
+                    command.Parameters.AddWithValue("v4", admission.FacultyId);
+                    command.Parameters.AddWithValue("v5", admission.Email);
+
+                    command.ExecuteNonQuery();
                 }
             }
         }
@@ -69,18 +71,63 @@ namespace Abiturient_System.Repository
                         {
                             Phone = phone,
                             FirstName = abiturientReader[0].ToString(),
-                            DiplomaImage = abiturientReader[1].ToString(),
-                            OrtCertificateImage = abiturientReader[2].ToString(),
-                            PassportImage = abiturientReader[3].ToString(),
-                            RegistrationCertificateImage = abiturientReader[4].ToString(),
-                            LastName = abiturientReader[6].ToString(),
+                            LastName = abiturientReader["last_name"].ToString(),
                             ApplicationAvailable = (int)abiturientReader["application_available"],
                             Role = "Абитуриент"
                         };
                     }
                 }
             }
-            throw new Exception("User not found");
+            throw new Exception("Пользователь не найден");
+        }
+
+        public List<Abiturient> TopFiveAbiturients()
+        {
+            List<Abiturient> abiturients = new List<Abiturient>();
+
+            using (var applicationCommand = new NpgsqlCommand("select * from abiturients order by ort_score desc limit 5", Connection.getInstance().getConnection()))
+            {
+
+                using (var reader = applicationCommand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Abiturient abiturient = new Abiturient()
+                        {
+                            Phone = reader["phone"].ToString(),
+                            FirstName = reader["first_name"].ToString(),
+                            LastName = reader["last_name"].ToString(),
+                            OrtScore = (int) reader["ort_score"]
+                        };
+                        abiturients.Add(abiturient);
+                    }
+                }
+            }
+
+            return abiturients;
+        }
+
+        public int MinOrtScore()
+        {
+            int minScore = 0;
+            using (var applicationCommand = new NpgsqlCommand("select min(ort_score) from abiturients", Connection.getInstance().getConnection()))
+            {
+                minScore = (int) applicationCommand.ExecuteScalar();
+                
+            }
+
+            return minScore;
+        }
+
+        public decimal AverageOrtScore()
+        {
+            decimal averageScore = 0;
+            using (var applicationCommand = new NpgsqlCommand("select avg(ort_score) from abiturients", Connection.getInstance().getConnection()))
+            {
+                averageScore = (decimal) applicationCommand.ExecuteScalar();
+            }
+
+            return averageScore;
         }
 
         public User Login(String phone, String password)

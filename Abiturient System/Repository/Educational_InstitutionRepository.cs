@@ -82,9 +82,6 @@ namespace Abiturient_System.Repository
                         ApplicationForm place = new ApplicationForm()
                         {
                             Id = (long)reader["id"],
-                            AbiturientId = reader["abiturient_phone"].ToString(),
-                            FacultyId = (long)reader["faculty_id"],
-                            Status = reader["status"].ToString()
                         };
                         applicationForm.Add(place);
                     }
@@ -151,45 +148,101 @@ namespace Abiturient_System.Repository
             return applicationForm;
         }
 
+        public List<ApplicationForm> getAllApplicationsByFacultySortedByOrtScore(Faculty faculty)
+        {
+            List<ApplicationForm> applicationForm = new List<ApplicationForm>();
+
+            using (var applicationCommand = new NpgsqlCommand("select id, abiturient_phone, faculty_id, abiturients.first_name, abiturients.last_name, abiturients.ort_score, status from applications join abiturients on abiturient_phone = abiturients.phone where faculty_id = @id order by abiturients.ort_score desc", Connection.getInstance().getConnection()))
+            {
+                applicationCommand.Parameters.AddWithValue("id", faculty.Id);
+
+                using (var reader = applicationCommand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        ApplicationForm application = new ApplicationForm()
+                        {
+                            Id = (long)reader["id"],
+                            AbiturientId = reader["abiturient_phone"].ToString(),
+                            FacultyId = (long)reader["faculty_id"],
+                            faculty = faculty,
+                            FirstName = reader["first_name"].ToString(),
+                            LastName = reader["last_name"].ToString(),
+                            OrtScore = (int)reader["ort_score"],
+                            Status = reader["status"].ToString()
+                        };
+                        applicationForm.Add(application);
+                    }
+                }
+            }
+
+            return applicationForm;
+        }
         public void sentApplicationForm(ApplicationForm applicationForm)
         {
-            using (var command = new NpgsqlCommand("insert into applications (id, faculty_id, abiturient_phone) values (@v1, @v2, @v3)", Connection.getInstance().getConnection()))
+            if (((Abiturient)Authentication.User).ApplicationAvailable > 0)
             {
-                command.Parameters.AddWithValue("v1", applicationForm.Id);
-                command.Parameters.AddWithValue("v2", applicationForm.FacultyId);
-                command.Parameters.AddWithValue("v3", applicationForm.AbiturientId);
+                string abiturientPhone = null;
 
-                command.ExecuteNonQuery();
+                using (var applicationCommand = new NpgsqlCommand("select abiturient_phone from applications where faculty_id = @facultyId", Connection.getInstance().getConnection()))
+                {
+                    applicationCommand.Parameters.AddWithValue("facultyId", applicationForm.FacultyId);
+
+                    using(var reader = applicationCommand.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            abiturientPhone = reader["abiturient_phone"].ToString();
+                            if (abiturientPhone.Equals(applicationForm.AbiturientId))
+                            {
+                                throw new Exception("Вы уже оставляли заявку");
+                            }
+                        }
+                    }
+                }
+                using (var command = new NpgsqlCommand("insert into applications (id, faculty_id, abiturient_phone) values (@v1, @v2, @v3)", Connection.getInstance().getConnection()))
+                {
+                    command.Parameters.AddWithValue("v1", applicationForm.Id);
+                    command.Parameters.AddWithValue("v2", applicationForm.FacultyId);
+                    command.Parameters.AddWithValue("v3", applicationForm.AbiturientId);
+
+                    command.ExecuteNonQuery();
+                }
+
+                updateFacultyAndAbiturent(applicationForm);
             }
+            
         }
 
         public void confirmApplicationForm(ApplicationForm applicationForm)
         {
+            Connection.getInstance().getConnection().Close();
+            Connection.getInstance().getConnection().Open();
             using (var command = new NpgsqlCommand("update applications set status = 'принят' where id = @applicationId", Connection.getInstance().getConnection()))
             {
                 command.Parameters.AddWithValue("applicationId", applicationForm.Id);
                 command.ExecuteNonQuery();
+            }
+        }
 
-                Connection.getInstance().getConnection().Close();
-                Connection.getInstance().getConnection().Open();
+        private void updateFacultyAndAbiturent(ApplicationForm applicationForm) 
+        {
+            using (var command2 = new NpgsqlCommand("update faculties set free_place_amount = free_place_amount - 1 where id = @facultyId", Connection.getInstance().getConnection()))
+            {
+                command2.Parameters.AddWithValue("facultyId", applicationForm.FacultyId);
+                command2.ExecuteNonQuery();
 
-                using (var command2 = new NpgsqlCommand("update faculties set free_place_amount = @newFreePlaceAmount where id = @facultyId", Connection.getInstance().getConnection()))
+                
+
+                using (var command3 = new NpgsqlCommand("update abiturients set application_available = application_available - 1 where phone = @phone2", Connection.getInstance().getConnection()))
                 {
-                    command.Parameters.AddWithValue("newFreePlaceAmount", applicationForm.faculty.FreePlaceAmount - 1);
-                    command.ExecuteNonQuery();
-
-                    Connection.getInstance().getConnection().Close();
-                    Connection.getInstance().getConnection().Open();
-
-                    using (var command3 = new NpgsqlCommand("update abiturients set application_available = @newApplication_available where phone = @phone2", Connection.getInstance().getConnection()))
-                    {
-                        command.Parameters.AddWithValue("newApplication_available",applicationForm.abiturient.ApplicationAvailable - 1);
-                        command.Parameters.AddWithValue("phone2", Authentication.User.Phone);
-                        command.ExecuteNonQuery();
-                    }
+                    command3.Parameters.AddWithValue("phone2", applicationForm.AbiturientId);
+                    command3.ExecuteNonQuery();
                 }
             }
         }
+        
+
         public void rejectApplicationForm(ApplicationForm applicationForm)
         {
             using (var command = new NpgsqlCommand("delete from applications where id = @applicationId", Connection.getInstance().getConnection()))
